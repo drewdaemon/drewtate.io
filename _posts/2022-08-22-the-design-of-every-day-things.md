@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "The Design of Every Day Things: Chapter 1"
+title: "The Design of Every Day Things—Chapter 1 Synopsis"
 tags: "reading notes"
 ---
 
-### The question of responsiblity
+### The question of responsibility
 
-Are machines responsible to work well with humans, or are humans responsible to learn how to work with machines? Engineer-types (of which I am one) tend to emphasize and embrace the logic of what they are building. If a user runs into trouble, we're stunned. It's so obvious!
+Are machines responsible to work well with humans, or are humans responsible to learn how to work with machines? Engineering types (of which I am one) tend to emphasize and embrace the logic of what they are building. If a user runs into trouble, we're stunned. They just need to think rationally! Did they even read the manual?
 
-Instead, we need to design machines that are delighful and helpful to _real, subjective humans_.
+Instead, we need to design every day machines that are delightful and helpful to _real humans_ who experience the world subjectively and don't have time to take an evening class on how to use their new microwave.
 
 In other words
 
 > It is the duty of machines and those who design them to understand people. It is not our duty to understand the arbitrary, meaningless dictates of machines.
 
-Norman, for one, apparently does not welcome our robot overlords. Fair enough.
+Norman, for one, does not welcome our robot overlords. Fair enough.
 
 ### Principles of human-centered design (HCD)
 
@@ -41,9 +41,9 @@ In most cases, the goal of the designer is to maximize discoverability by aligni
 
 #### Mapping
 
-In my apartment, I have three light switches in a row on my wall. They are located in the living area. The one furthest from the dining table controls the light that illuminates the dining area. The one closest to the dining table controls the lighting in the living room area. And the middle one does nothing (..._as far as I know_).
+In my apartment, I have three light switches in a row on my wall. They are located in the living area. The one in the middle controls the lighting in the living room area. The one furthest from the dining table controls the light that illuminates the dining area. And the one closest to the dining area does nothing (..._as far as I know_).
 
-I've lived here for three months but, when it's time to eat, I still occasionally reach for the switch closest to the dining area. My light switches are badly _mapped_.
+I've lived here for three months but, when it's time to eat, I still occasionally reach for the switch closest to the dining area. My light switches are badly _mapped_, leaving me to my trial-and-error.
 
 Mapping means harnessing the power of spatial analogies in design. When done successfully, the designed object is immediately understandable because the user can draw upon an obvious frame of reference.
 
@@ -53,25 +53,25 @@ The idea behind feedback is that the results of an action should be communicated
 
 Feedback is most critical when something is going wrong. It is often straightforward to design a product that works well as long as everything goes the way the designer intends. Products that provide great feedback can get the user back on track (or at least be somehow helpful) when things _don't_ go as planned.
 
-However, one has to walk a line. Too much feedback can be extremely distracting and annoying. It can also cause users to miss out on important feedback since it is drowned out in a roar of verbosity. This is why we have log levels in good software.
+However, one has to walk a line. Too much feedback can be extremely distracting and annoying. It can also cause users to miss out on important information since it is drowned out in a roar of verbosity. This is why we have log levels in good software.
 
-Take [this recent Kibana issue](https://github.com/elastic/kibana/issues/67270) for instance. When things go wrong, in some instances users are spammed with a wall of error messages of varying degrees of importance. This is an issue we need to address.
+Take [this recent Kibana issue](https://github.com/elastic/kibana/issues/67270) for instance. When things go wrong, users are sometimes spammed with a wall of error messages of varying degrees of importance. This is something we need to address.
 
 #### The conceptual model
 
-The design of a product should be understandable. A big part of this is that it should accurately communicate useful ideas about the inner working of the machine. It doesn't actually matter how specific or abstract these ideas are in the user's head, as long as they hold in all scenarios.
+The design of a product should be understandable. A big part of this is that it should accurately communicate useful ideas about the inner working of the machine. It doesn't actually matter how specific or abstract (or even technically accurate) these ideas are in the user's head, as long as they hold in all scenarios the user will face.
 
-Sometimes products are designed with simplicity in mind. However, there is a in pursuing simplicity too strenuously. A design that communicates an oversimplified conceptual model can instill inaccurate beliefs in the user's mind that are ultimately unhelpful or confusing. I see this often in software. This is another difficult line to walk.
+Products are often designed with simplicity in mind. However, there is a danger in pursuing simplicity too strenuously. A design that communicates an oversimplified conceptual model can instill inaccurate beliefs in the user's mind that are ultimately unhelpful or confusing. I see this often in complex software. (E.g. Lens has a "top values" function that hides some [serious complexity](https://discuss.elastic.co/t/top3-in-line-graph-and-top-values-in-available-fields-are-different/310382/4).) This is another difficult line to walk.
 
 #### The system image
 
-The designer has no direct communication with the user. Instead, a set of physical artifacts which can include documentation as well as the designed object itself are left to do the talking. These artifacts compose _the system image_. The system image communicates affordances, gives feedback, and imparts a conceptual model to the user's mind.
+The designer has no direct communication with the user. Instead, a set of physical artifacts which can include documentation as well as the designed object itself are left to do the talking. These artifacts compose _the system image_. The system image communicates affordances, gives feedback, and imparts a conceptual model to the user's mind. Altogether, the system image is what the user will _experience_.
 
 ### In conclusion
 
 Norman concludes with a few thoughts around how advances in technology currently outpace advances in design.
 
-Design is also made difficult by how much orchestration it takes. The engineer will push for stability, the marketer will push for cutting costs and adding features, the store wants something that will be attractive to its customers. The product must satisfy the requirements of both those who buy it and those who use it, often separate groups of people (think CIO making decisions about technology vendors).
+Effective design is also made difficult by how much orchestration it takes. The engineer will push for stability, the marketer will push for cutting costs and adding features, the store wants something that will be attractive to its customers. The product must satisfy the requirements of both those who buy it and those who use it, often separate groups of people (think CIO making decisions about technology vendors).
 
 Despite this, he assures us that
 
