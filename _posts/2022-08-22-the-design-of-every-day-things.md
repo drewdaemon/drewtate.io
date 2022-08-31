@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Design of Every Day Things—Chapter 1 Synopsis"
+title: "The Design of Everyday Things—Chapter 1 Synopsis"
 tags: "reading notes"
 ---
 
@@ -8,7 +8,7 @@ tags: "reading notes"
 
 Are machines responsible to work well with humans, or are humans responsible to learn how to work with machines? Engineering types (of which I am one) tend to emphasize and embrace the logic of what they are building. If a user runs into trouble, we're stunned. They just need to think rationally! Did they even read the manual?
 
-Instead, we need to design every day machines that are delightful and helpful to _real humans_ who experience the world subjectively and don't have time to take an evening class on how to use their new microwave.
+Instead, we need to design everyday machines that are delightful and helpful to _real humans_ who experience the world subjectively and don't have time to take an evening class on how to use their new microwave.
 
 In other words
 
