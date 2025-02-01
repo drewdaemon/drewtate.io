@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Big</title>
+    <link href="big.css" rel="stylesheet" type="text/css" />
+    <link href="themes/dark.css" rel="stylesheet" type="text/css" />
+    <script src="big.js"></script>
+  </head>
+  <body class="light">
+    <div>
+      React Testing Library
+    </div>
+    <div>
+      "The more your tests resemble the way your software is used, the more confidence they can give you."
+      <br>
+      <br>
+      <a href="https://testing-library.com/docs/guiding-principles/">RTL docs</a>
+    </div>
+    <div>
+      Some things are different 🥁🥁🥁🥁🥁
+    </div>
+    <div>
+      What do users interact with?
+    </div>
+    <div>
+      DOM
+    </div>
+    <div>
+      What should our tests interact with?
+    </div>
+    <div>
+      DOM
+    </div>
+    <div>
+      Render or do not...
+    </div>
+    <div>
+      ...there is no "shallow."
+    </div>
+    <div>
+      <pre>
+        import { render } from '@testing-library/react';
+      
+        render(
+          &lt;I18nProvider&gt;
+            &lt;GroupPreview {...defaultProps} /&gt;
+          &lt;/I18nProvider&gt;
+        );
+      </pre>
+    </div>
+    <div>
+      But you <i>can</i> still mock 🙈
+    </div>
+    <div>
+      <pre>
+        jest.mock('@elastic/eui', () => ({
+          ...jest.requireActual('@elastic/eui'),
+          useResizeObserver: jest.fn(),
+        }));
+      </pre>
+    </div>
+    <div>
+      But... most of the time you shouldn't 😅
+    </div>
+    <div>
+      "The more your tests resemble the way your software is used, the more confidence they can give you."
+      <br>
+      <br>
+      <a href="https://testing-library.com/docs/guiding-principles/">RTL docs</a>
+    </div>
+    <div>
+      No more access to sub props.
+    </div>
+    <div>
+      In a past life...
+      <pre>
+        component.find(DatePickerComponent).prop(‘onDateChange’)(newDate);
+      </pre>
+    </div>
+    <div>
+      The bright future 🌅
+      <pre>
+        userEvent.click(screen.getByRole('link', { name: 'Last five minutes' }));
+      </pre>
+    </div>
+    <div>
+      The bright future 🌅
+      <pre>
+        userEvent.click(<em>screen.getByRole(</em>'link', { name: 'Last five minutes' }<em>)</em>);
+      </pre>
+    </div>
+    <div>
+      The bright future 🌅
+      <pre>
+        userEvent.click(screen.getByRole(<em>'link'</em>, { name: <em>'Last five minutes'</em> }));
+      </pre>
+    </div>
+    <div>
+      The bright future 🌅
+      <pre>
+        <em>userEvent.click(</em>screen.getByRole('link', { name: 'Last five minutes' })<em>)</em>;
+      </pre>
+    </div>
+    
+    <div>
+      Asynchronous stuff
+    </div>
+    <div>
+      Asynchronous stuff: Enzyme
+    </div>
+    <div>
+      <pre>
+        await wrapper
+          .find(`.kbnFieldButton__button`)
+          .simulate('click');
+        
+        expect(something).toHaveBeenCalledWith(something expected);
+      </pre>
+    </div>
+    <div>
+      FAIL
+    </div>
+    <div>
+      🤔
+    </div>
+    <div>
+      <pre>
+        <em>await act(async () =&gt; {</em>
+          await wrapper
+          .find(`.kbnFieldButton__button`)
+          .simulate('click');
+        <em>});</em>
+        
+        expect(something).toHaveBeenCalledWith(something expected);
+      </pre>
+    </div>
+    <div>
+      FAIL
+    </div>
+    <div>
+      🧐
+    </div>
+    <div>
+      <pre>
+        await act(async () =&gt; {
+          await wrapper
+          .find(`.kbnFieldButton__button`)
+          .simulate('click');
+        });
+        
+        <em>wrapper.update();</em>
+        
+        expect(something).toHaveBeenCalledWith(something expected);
+      </pre>
+    </div>
+    <div>
+      FAIL
+    </div>
+    <div>
+      😠
+    </div>
+    <div>
+      <pre>
+        await act(async () =&gt; {
+          await wrapper
+          .find(`.kbnFieldButton__button`)
+          .simulate('click');
+        });
+        
+        wrapper.update();
+        <em>await new Promise(resolve =&gt; setTimeout(resolve, 0));</em>
+        
+        expect(something).toHaveBeenCalledWith(something expected);
+      </pre>
+    </div>
+    <div>
+      FAIL
+    </div>
+    <div>
+      😡
+    </div>
+    <div>
+      <pre>
+        <em>
+        jest.mock('lodash', () =&gt; {
+          const original = jest.requireActual('lodash');
+
+          return {
+            ...original,
+            debounce: (fn: unknown) =&gt; fn,
+          };
+        });
+        </em>
+      
+        ...
+      
+        await act(async () =&gt; {
+          await wrapper
+          .find(`.kbnFieldButton__button`)
+          .simulate('click');
+        });
+        
+        wrapper.update();
+        await new Promise(resolve =&gt; setTimeout(resolve, 0));
+        
+        expect(something).toHaveBeenCalledWith(something expected);
+      </pre>
+    </div>
+    <div>
+      PASS
+    </div>
+    <div>
+      😅
+    </div>
+    <div>
+      🤨 Does this test actually mean anything?
+    </div>
+    <div>
+      Asynchronous stuff: RTL
+    </div>
+    <div>
+      <pre>
+        userEvent.click(screen.getByRole('link', { name: 'Last five minutes' }));
+      
+        expect(something).toHaveBeenCalledWith(something expected);
+      </pre>
+    </div>
+    <div>
+      FAIL
+    </div>
+    <div>
+      🙂
+    </div>
+    <div>
+      <pre>
+        import { ... <em>waitFor</em> } from '@testing-library/react';
+      
+        ...
+      
+        userEvent.click(screen.getByRole('link', { name: 'Last five minutes' }));
+      
+        <em>await waitFor(() =&gt; {</em>
+          expect(something).toHaveBeenCalledWith(something expected);
+        <em>});</em>
+      </pre>
+    </div>
+    <div>
+      PASS
+    </div>
+    <div>
+      😎
+    </div>
+    
+    <div>
+      Accessing DOM elements
+    </div>
+    
+    <div>
+      3 core operations
+      <ul>
+        <li><em>get</em> — throws if not found</li>
+        <li><em>query</em> — returns empty if not found</li>
+        <li><em>find</em> — like <em>get</em> + <em>waitFor</em></li>
+      </ul>
+    </div>
+    
+    <div>
+      Singular (strict)
+      <ul>
+        <li><em>getBy...</em></li>
+        <li><em>queryBy...</em></li>
+        <li><em>findBy...</em></li>
+      </ul>
+    </div>
+
+    <div>
+      Plural
+      <ul>
+        <li><em>getAllBy...</em></li>
+        <li><em>queryAllBy...</em></li>
+        <li><em>findAllBy...</em></li>
+      </ul>
+    </div>
+<!--     
+    <div>
+      <img src="https://cdn.glitch.global/07f84dc8-1c6c-4845-9860-cd0ad9ca664d/Screenshot%202023-10-31%20at%202.58.22%20PM.png?v=1698786075317" >
+    </div> -->
+    
+    <div>
+      Good
+      <ul>
+        <li><em>getByTestId</em></li>
+      </ul>
+    </div>
+    
+    <div>
+      Better
+      <ul>
+        <li><em>getByAltText</em></li>
+        <li><em>getByTitle</em></li>
+      </ul>
+    </div>
+    
+    <div>
+      Best!
+      <ul>
+        <li><em>getByRole</em></li>
+        <li><em>getByLabelText</em></li>
+        <li><em>getByPlaceholderText</em></li>
+        <li><em>getByText</em></li>
+        <li><em>getByDisplayValue</em></li>
+      </ul>
+    </div>
+
+    <div>
+      Interacting with the DOM
+    </div>
+    
+    <div>
+      <pre>
+        import { ..., screen, fireEvent } from '@testing-library/react';
+      
+        fireEvent.click(await screen.findByText(label));
+      </pre>
+    </div>
+
+    <div>
+      <pre>
+        elem.dispatchEvent(event);
+      </pre>
+    </div>
+    
+    <div>
+      "The more your tests resemble the way your software is used, the more confidence they can give you."
+      <br>
+      <br>
+      <a href="https://testing-library.com/docs/guiding-principles/">RTL docs</a>
+    </div>
+    
+    <div>
+      RTL 🤗 <em>user-event</em>
+    </div>
+
+    <div>
+      <pre>
+        import { ..., screen } from '@testing-library/react';
+        <em>import userEvent from '@testing-library/user-event';</em>
+      
+        <em>userEvent</em>.click(await screen.findByText(label));
+      </pre>
+    </div>
+    
+    <div>
+      RTL 🤗 <em>jest-dom</em>
+    </div>
+    
+    <div>
+      <pre>
+        expect(screen.getByTestId('button')).<em>toBeDisabled()</em>;
+        expect(screen.queryByRole('combo-box')).not.<em>toBeInTheDocument()</em>;
+      </pre>
+    </div>
+    
+    <div>
+      RTL Resources
+      <ul>
+        <li><a href="https://testing-library.com/docs/react-testing-library/intro">General RTL docs</a></li>
+        <li><a href="https://testing-library.com/docs/queries/about#priority">Query docs</a></li>
+        <li><a href="https://github.com/testing-library/jest-dom">Jest DOM</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      Up next in testing
+      <ul>
+        <li>Update RTL dependencies ⬆️</li>
+        <li>Adoption tracking/team pulse</li>
+        <li>Team testing strategy document</li>
+        <li>Other ideas from the team 💡</li>
+      </ul>
+    </div>
+    
+    <div>
+      
+    </div>
+
+  </body>
+</html>

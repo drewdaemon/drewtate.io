@@ -1,0 +1,50 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+sup {
+  font-size: small;
+}
+
+.contentContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.postContent {
+  max-width: 28rem;
+}
+
+.indexContent {
+  max-width: 28rem;
+}
+
+.blogTitle {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+ul.postList {
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+ul.postList li {
+  list-style-type: none;
+  padding-top: 0.2rem;
+}
+
+.postDate {
+  color: #aaa;
+}
+
+/*# sourceMappingURL=main.css.map */
