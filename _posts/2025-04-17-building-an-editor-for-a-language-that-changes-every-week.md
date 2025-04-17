@@ -91,7 +91,7 @@ As you start to "live" in a new codebase you often start to notice inefficiencie
 
 The original architecture of the autocomplete engine used a declarative interface with a predefined vocabulary of properties to represent each command's syntax. This was then matched up with a query's AST to generate suggestions.
 
-I assume the hope was that the structure of each command would look much the same, like a functions do. The problem is that this not how `ES|QL` has played out. In the grand tradition of query languages, the commands have started looking much different from one another.
+I assume the hope was that the structure of each command would look much the same, like functions do. The problem is that this is not how `ES|QL` has played out. In the grand tradition of query languages, the commands have started looking much different from one another.
 
 We started to see issues with using a declarative interface and these grew with every new command.
 
@@ -112,7 +112,7 @@ I still run all this code in the browser—but in practice, I’ve been a langua
 
 But the key abilities I've gained from my latest years in frontend work—my sense for cognitive psychology, my understanding of how to build a coherent product, and my knowledge of the browser's execution environment— still come in clutch.
 
-So, the editor exists at the intersection of these disciplines.
+The editor exists at the intersection of these disciplines.
 
 Here’s to the future of `ES|QL`. 🥂
 
