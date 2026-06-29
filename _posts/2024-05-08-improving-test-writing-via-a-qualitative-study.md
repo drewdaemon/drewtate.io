@@ -2,6 +2,7 @@
 layout: post
 title: Improving test writing via a qualitative study
 date: 2024-05-08 21:30 -0600
+tags: [tech]
 ---
 
 At work I often have side projects — things that aren't exactly

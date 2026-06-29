@@ -2,6 +2,7 @@
 title: A major autocomplete engine overhaul
 date: '2025-05-22 00:00:00'
 layout: post
+tags: [tech]
 ---
 
 This is the story of how I redesigned the autocomplete engine for Elastic's query language, `ES|QL`. 

@@ -2,6 +2,7 @@
 layout: post
 title: A great way to run a book club
 date: 2024-03-28 20:34 -0600
+tags: [reading]
 ---
 
 When I lived in Richardson, TX, I was invited to be part of a men's book club. I was very impressed with how it was set up.

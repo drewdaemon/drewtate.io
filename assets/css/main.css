@@ -47,4 +47,42 @@ ul.postList li {
   color: #aaa;
 }
 
+.tagList {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.tagList a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.tagList a:hover {
+  text-decoration: underline;
+}
+
+.postTags {
+  font-size: 0.85rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.postTags::before {
+  content: "(";
+}
+
+.postTags::after {
+  content: ")";
+}
+
+.postTags a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.postTags a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */

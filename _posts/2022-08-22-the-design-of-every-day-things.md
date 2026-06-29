@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Synopsis of the first chapter of <i>The Design of Everyday Things</i>"
-tags: "reading notes"
+tags: [reading]
 ---
 
 ## The question of responsibility
