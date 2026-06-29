@@ -2,6 +2,7 @@
 title: Building an editor for a language that changes every week
 date: "2025-04-07"
 layout: post
+tags: [tech]
 ---
 
 For almost a year now I've been improving the web-based editor for Elastic's new query language, `ES|QL`<sup>1</sup>—a project that’s transforming how humans, systems, and AI agents query data in Elasticsearch.

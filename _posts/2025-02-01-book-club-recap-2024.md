@@ -2,6 +2,7 @@
 title: "Book club recap: 2024"
 layout: post
 date: "2025-02-01 10:34:40"
+tags: [reading]
 ---
 
 Back in March I blogged about a great way to run a book club and said I'd be starting one myself. Well, it's been a road with ups and downs, but as I look back on 2024, I call it a success.

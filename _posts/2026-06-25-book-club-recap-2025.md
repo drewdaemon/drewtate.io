@@ -2,6 +2,7 @@
 title: "Book club recap: 2025"
 layout: post
 date: "2026-06-25 00:00:00"
+tags: [reading]
 ---
 
 Am I posting the book club recap for 2025 in June 2026, six months after I should have? You know it!

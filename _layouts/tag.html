@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1 class="blogTitle">Posts tagged: {{ page.tag }}</h1>
+
+<p><a href="/">← Back to all posts</a></p>
+
+<ul class="postList">
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag %}
+    <li>
+      <span class="postDate">{{ post.date | date: "%d %b %Y" }}</span> &#10148; <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
