@@ -47,4 +47,43 @@ ul.postList li {
   color: #aaa;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+th {
+  text-align: right;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.2rem;
+  padding-right: 1rem;
+}
+
+td {
+  vertical-align: top;
+  text-align: right;
+  padding: 0.25rem 1rem 0.25rem 0;
+  border-bottom: 1px solid #eee;
+  color: #000;
+}
+
+td:last-child, th:last-child {
+  padding-right: 0;
+}
+
+.postContent table {
+  width: calc(100% + 16rem);
+  margin-left: -8rem;
+}
+
+@media (max-width: 46rem) {
+  .postContent table {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+    overflow-x: auto;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
