@@ -45,6 +45,8 @@ ul.postList li {
 
 .postDate {
   color: #aaa;
+  display: inline-block;
+  min-width: 5.8rem;
 }
 
 table {
