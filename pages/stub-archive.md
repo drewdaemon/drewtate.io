@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Stub archive
-date: 2026-08-08
 pinned: true
+permalink: /stub-archive/
 ---
 
 <style>

@@ -5,13 +5,15 @@ title: "Drew Tate's Blog"
 
 <h1 class="blogTitle">Drew Tate</h1>
 
+{% assign pinned_pages = site.pages | where: "pinned", true %}
 {% assign pinned_posts = site.posts | where: "pinned", true %}
+{% assign all_pinned = pinned_pages | concat: pinned_posts %}
 {% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" %}
 
-{% if pinned_posts.size > 0 %}
+{% if all_pinned.size > 0 %}
 
 <ul class="postList">
-  {% for post in pinned_posts %}
+  {% for post in all_pinned %}
   <li>
     <span class="postDate">Evergreen 🌲</span> &#10148; <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
