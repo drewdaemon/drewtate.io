@@ -14,6 +14,7 @@ permalink: /book-archive/
 
 | Date           | Title            | Author          | Notes          |
 | -------------- | ---------------- | --------------- | -------------- |
+| Oct 2026    | _The Light of All That Falls_ | James Islington | This series had an interesting premise and some engaging world building. I didn't love most of the characters. The casualty counts were insanely high and the way the characters dealt with suffering and death of other people and themselves felt flat and unrealistic. There were certainly passages I enjoyed but overall not one of my favorite series. |
 | Sep 2026    | _The Warden_ | Anthony Trollope | Such a charming book, but with so much substantive commentary about reform. It is amazing how pertinent it remains over 100 years after being published. I really thought the characters were well done and made even better by Nigel Hawthorne as narrator for the audiobook. |
 | August 2026    | _The Dark Forest_ | Liu Cixin | Fantastic. I liked _The Three-Body Problem_, but this sequel outdoes it by a mile. The ideas introduced are fascinating. It's amazing how Cixin leaves you in suspence to the very end. And the hope of the ending was beautiful. I cried 😭. |
 | August 2026    | _Whistler_ | Ann Patchett |  |
